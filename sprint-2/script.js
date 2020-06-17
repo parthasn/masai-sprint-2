@@ -8,60 +8,60 @@ function index2ToIndex3(){
     window.location.href = "file:///C:/Users/avin1103/projects/masai/masai-sprint-2/sprint-2/index3.html"
 }
 
+var showResults = document.getElementById("showButton")
+showResults.addEventListener("click", addDetails)
 
-function renderDOM(){
+function addDetails() {
+    event.preventDefault()
+    var breakfastCal = document.getElementById("breakfastCal").value
+    var lunchCal = document.getElementById("lunchCal").value
+    var dinnerCal = document.getElementById("dinnerCal").value
+
+    var exerciseCal = document.getElementById("calIntake").value
+
+    renderDOM(breakfastCal,lunchCal,dinnerCal,exerciseCal)
+
+}   
+
+function renderDOM(breakfastCal,lunchCal,dinnerCal,exerciseCal){
+    var row = document.createElement("tr")
+
+    var caloriesConsumed = document.createElement('td')
+    caloriesConsumed.textContent = Number(breakfastCal) + Number(lunchCal) + Number(dinnerCal)
+
+    var caloriesBurnt = document.createElement('td')
+    caloriesBurnt.textContent = Number(exerciseCal)
+
+    var differenceInCalories = document.createElement('td')
+    if(caloriesConsumed.textContent > caloriesBurnt.textContent){
+        caloriesDifference = (caloriesConsumed.textContent - caloriesBurnt.textContent) + " (Excess)"
+    }
+    else if (caloriesConsumed.textContent === caloriesBurnt.textContent){
+        caloriesDifference = "None"
+    }
+    else{
+        caloriesDifference = (caloriesBurnt.textContent - caloriesConsumed.textContent) + " (Lost)"
+    }
+    differenceInCalories.textContent = caloriesDifference
+
+    var fatDifference = document.createElement('td')
+    if(caloriesConsumed.textContent > caloriesBurnt.textContent){
+        fatChange = ((caloriesConsumed.textContent - caloriesBurnt.textContent)/7000) + " (Gained)"
+    }
+    else if (caloriesConsumed.textContent === caloriesBurnt.textContent){
+        fatChange = "None"
+    }
+    else {
+        fatChange = ((caloriesBurnt.textContent - caloriesConsumed.textContent)/7000) + " (Lost)"
+    }
+    fatDifference.textContent = fatChange
+
+    row.append(caloriesConsumed, caloriesBurnt, differenceInCalories, fatDifference)
+
+    var tBody = document.getElementById("results")
+    tBody.append(row)
 
 }
 
 
 
-// var totalCalories = 0;
-// function addToTotalCalories(){
-//     var caloriesGained = Number(document.getElementById("breakfastCal").value) + Number(document.getElementById("lunchCal").value)
-//                     + Number(document.getElementById("dinnerCal").value);
-//     var caloriesBurnt = Number(document.getElementById("calIntake").value);
-   
-
-//     var caloriesConsumed = document.createElement('h3');
-//     caloriesConsumed.textContent = "Total Calories Consumed : " + caloriesGained + " Cal";
-//     caloriesConsumed.style.fontSize = '50px';
-//     caloriesConsumed.style.margin = '20px';
-//     caloriesConsumed.style.color = '#039BE5';
-//     document.getElementById('result').appendChild(caloriesConsumed)
-
-//     var caloriesUsed = document.createElement('h3');
-//     caloriesUsed.textContent = "Total Calories Burnt : " + caloriesBurnt + " Cal";
-//     caloriesUsed.style.fontSize = '50px';
-//     caloriesUsed.style.margin = '20px';
-//     caloriesUsed.style.color = '#039BE5';
-//     document.getElementById('result').appendChild(caloriesUsed);
-
-
-//     if(caloriesGained > caloriesBurnt){
-//         caloriesDifference = "Calories Excess : " +(caloriesGained - caloriesBurnt) + " Cal"
-//     }
-//     else{
-//         caloriesDifference = "Calories Deficit : " +(caloriesBurnt - caloriesGained) + " Cal"
-//     }
-//     var differenceInCalories = document.createElement('h3');
-//     differenceInCalories.textContent = caloriesDifference;
-//     differenceInCalories.style.fontSize = '50px';
-//     differenceInCalories.style.margin = '20px';
-//     differenceInCalories.style.color = '#039BE5';
-//     document.getElementById('result').appendChild(differenceInCalories);
-
-//     if(caloriesGained > caloriesBurnt){
-//         fatChange = "Fat Gained : " + ((caloriesGained - caloriesBurnt)/7000) + " KG"
-//     }
-//     else {
-//         fatChange = "Fat Lost : " + ((caloriesBurnt - caloriesGained)/7000) + " KG"
-//     }
-//     var fatDifference = document.createElement('h3');
-//     fatDifference.id = 'fatChange';
-//     fatDifference.textContent = fatChange;
-//     fatDifference.style.fontSize = '50px';
-//     fatDifference.style.margin = '20px';
-//     fatDifference.style.color = '#039BE5';
-//     document.getElementById('result').appendChild(fatDifference);
-
-// }
