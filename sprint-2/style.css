@@ -1,3 +1,139 @@
-tr > td {
-    width : 25%;
+
+
+#box{
+    background-color: #00BCD4;
 }
+
+
+tr > td {
+    width : 165px;
+    color : #00BCD4;
+}
+
+div h1 {
+    text-align : center;
+    color : white;
+}
+
+#openingDiv > div {
+    height : 20%;
+}
+
+.align_center {
+    text-align: center;
+}
+
+#toIndex1 {
+    height : 40px;
+    width : 200px;
+    border-radius : 25px;
+    background-color : white;
+    color : #00BCD4;
+    border : none;
+    font-weight: bold;
+    text-align : center;
+    padding : 10px;
+}
+
+div p {
+    color : #00BCD4;
+}
+
+p + input {
+    text-align : center;
+    height : 40px;
+    width : 300px;
+    border : 2px solid #00BCD4;
+    color : #00BCD4;
+    border-radius : 20px;
+    
+
+}
+
+#gender {
+    color : #00BCD4;
+    margin : auto;
+    height : 40px;
+    width : 300px;
+    border : 2px solid #00BCD4;
+    border-radius : 20px;
+
+}
+
+#toIndex2 {
+    height : 35px;
+    width : 200px;
+    border-radius : 25px;
+    background-color : #00BCD4;
+    color : white;
+    border : none;
+    font-weight: bold;
+    text-align : center;
+    padding : 10px;
+}
+
+#toIndex3 {
+    height : 35px;
+    width : 200px;
+    border-radius : 25px;
+    background-color : #00BCD4;
+    color : white;
+    border : none;
+    font-weight: bold;
+    text-align : center;
+    padding : 10px;
+}
+
+#results tr td {
+    border : 1px solid #00BCD4;
+    text-align : center;
+}
+
+#mainDiv {
+    color : #00BCD4;
+    float : left;
+    
+}
+
+div h4 {
+    margin-top : 10px;
+    margin-bottom : 10px;
+}
+
+div h2 {
+    margin-top : 10px;
+}
+
+.float_right{
+    float : right;
+}
+
+.margin {
+    margin : 10px;
+}
+
+h4 ~ input {
+    text-align : center;
+    border : 2px solid #00BCD4;
+    height : 30px;
+    border-radius : 15px;
+    color : #00BCD4;
+}
+
+#showButton {
+    height : 35px;
+    width : 200px;
+    border-radius : 25px;
+    background-color : #00BCD4;
+    color : white;
+    border : none;
+    font-weight: bold;
+    text-align : center;
+    padding : 12px;
+}
+
+#date {
+    color : #00BCD4;
+}
+
+

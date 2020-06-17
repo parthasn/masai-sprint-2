@@ -16,10 +16,15 @@ function addDetails() {
     var breakfastCal = document.getElementById("breakfastCal").value
     var lunchCal = document.getElementById("lunchCal").value
     var dinnerCal = document.getElementById("dinnerCal").value
-
     var exerciseCal = document.getElementById("calIntake").value
 
     renderDOM(breakfastCal,lunchCal,dinnerCal,exerciseCal)
+
+    document.getElementById("breakfastCal").value = ""
+    document.getElementById("lunchCal").value = ""
+    document.getElementById("dinnerCal").value = ""
+    document.getElementById("calIntake").value = ""
+    
 
 }   
 
@@ -60,6 +65,8 @@ function renderDOM(breakfastCal,lunchCal,dinnerCal,exerciseCal){
 
     var tBody = document.getElementById("results")
     tBody.append(row)
+
+    
 
 }
 
