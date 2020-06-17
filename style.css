@@ -1,0 +1,149 @@
+
+#box {
+    height : 95%;
+    width : 95%;
+   
+    border-radius : 40px;
+    background-color: #039BE5;
+    margin : auto;
+    margin-top : 50px;
+}
+#box > div {
+    height : 19%;
+    margin : 5px;
+   
+}
+.logo {
+    height : 70%;
+    width : 80%;
+    border-radius : 100px;
+    text-align : center;
+    margin : auto;
+    font-size : 60px;
+    color : #E1F5FE;
+    
+}
+
+.button {
+    height : 50%;
+    width : 60%;
+    background-color : #E1F5FE;
+    color : #039BE5;
+    margin-left : 180px;
+    font-size : 50px;
+    border-radius : 50px;
+}
+#box1 {
+    height : 95%;
+    width : 95%;
+    border : 1px solid #01579B;
+    border-radius : 40px;
+    background-color : #E1F5FE;
+    margin : auto;
+    margin-top : 50px;
+    }
+   
+.divName {
+    text-align : center;
+    font-size : 60px;
+    color : #039BE5;
+   
+}
+.divName1 {
+    
+    margin-left : 20px;
+    font-size : 55px;
+    color : #039BE5;
+}
+.divName2 {
+    margin-top : 60px;
+    margin-left : 20px;
+    font-size : 55px;
+    color : #039BE5;
+}
+p + input {
+    height : 60px;
+    width : 500px;
+    font-size : 40px;
+    border-radius : 20px;
+    text-align : center;
+   
+    
+}
+#gender {
+    height : 60px;
+    width : 500px;
+    font-size : 40px;
+    border-radius : 20px;
+   
+    margin : auto;
+}
+.button1 {
+    height : 90px;
+    width : 500px;
+    font-size : 40px;
+    border-radius : 20px;
+    background-color : #039BE5;
+    color : #E1F5FE;
+    margin-top : 30px;
+}
+.calCheck {
+    height : 15%;
+    text-align : center;
+
+}
+div > h1 {
+    font-size : 50px;
+    color : #039BE5;
+
+}
+.divName > h1 {
+    font-size : 60px;
+    color : #039BE5;
+}
+#divIndex4 {
+    height : 8%;
+    padding : 20px;
+
+}
+#divIndex5 {
+    height : 8%;
+    padding : 20px;
+
+}
+#divIndex6 {
+    height : 8%;
+    padding : 20px;
+
+}
+#divIndex7 {
+    height : 8%;
+    padding : 20px;
+
+}
+h1 + input {
+    height : 60px;
+    width : 400px;
+    font-size : 40px;
+    border-radius : 20px;
+    text-align : center;
+}
+input + input {
+    height : 60px;
+    width : 200px;
+    font-size : 40px;
+    border-radius : 20px;
+    text-align : center;
+    margin-left : 40px;
+}
+input + button {
+    height : 60px;
+    width : 150px;
+    font-size : 30px;
+    border-radius : 30px;
+    background-color : #039BE5;
+    color : #E1F5FE;
+    margin-left : 50px;
+
+}
+
