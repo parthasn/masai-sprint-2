@@ -33,33 +33,37 @@ function renderDOM(breakfastCal,lunchCal,dinnerCal,exerciseCal){
 
     var caloriesConsumed = document.createElement('td')
     caloriesConsumed.textContent = Number(breakfastCal) + Number(lunchCal) + Number(dinnerCal)
+    console.log(caloriesConsumed.textContent)
 
     var caloriesBurnt = document.createElement('td')
     caloriesBurnt.textContent = Number(exerciseCal)
+    console.log(caloriesBurnt.textContent)
 
     var differenceInCalories = document.createElement('td')
-    if(caloriesConsumed.textContent > caloriesBurnt.textContent){
+    if(Number(caloriesConsumed.textContent) > Number(caloriesBurnt.textContent)){
         caloriesDifference = (caloriesConsumed.textContent - caloriesBurnt.textContent) + " (Excess)"
     }
     else if (caloriesConsumed.textContent === caloriesBurnt.textContent){
         caloriesDifference = "None"
     }
     else{
-        caloriesDifference = (caloriesBurnt.textContent - caloriesConsumed.textContent) + " (Lost)"
+        caloriesDifference = (Number(caloriesBurnt.textContent) - Number(caloriesConsumed.textContent)) + " (Lost)"
     }
     differenceInCalories.textContent = caloriesDifference
+    console.log(caloriesDifference)
 
     var fatDifference = document.createElement('td')
-    if(caloriesConsumed.textContent > caloriesBurnt.textContent){
-        fatChange = ((caloriesConsumed.textContent - caloriesBurnt.textContent)/7000) + " (Gained)"
+    if(Number(caloriesConsumed.textContent) > Number(caloriesBurnt.textContent)){
+        fatChange = ((Number(caloriesConsumed.textContent) - Number(caloriesBurnt.textContent))/7000) + " (Gained)"
     }
     else if (caloriesConsumed.textContent === caloriesBurnt.textContent){
         fatChange = "None"
     }
     else {
-        fatChange = ((caloriesBurnt.textContent - caloriesConsumed.textContent)/7000) + " (Lost)"
+        fatChange = ((Number(caloriesBurnt.textContent) - Number(caloriesConsumed.textContent))/7000) + " (Lost)"
     }
     fatDifference.textContent = fatChange
+    console.log(fatChange)
 
     row.append(caloriesConsumed, caloriesBurnt, differenceInCalories, fatDifference)
 
