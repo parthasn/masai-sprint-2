@@ -24,6 +24,11 @@ function addDetails() {
     document.getElementById("lunchCal").value = ""
     document.getElementById("dinnerCal").value = ""
     document.getElementById("calIntake").value = ""
+    document.getElementById("meal1").value = ""
+    document.getElementById("meal2").value = ""
+    document.getElementById("meal3").value = ""
+    document.getElementById("exercise").value = ""
+
     
 
 }   
@@ -47,7 +52,7 @@ function renderDOM(breakfastCal,lunchCal,dinnerCal,exerciseCal){
         caloriesDifference = "None"
     }
     else{
-        caloriesDifference = (Number(caloriesBurnt.textContent) - Number(caloriesConsumed.textContent)) + " (Lost)"
+        caloriesDifference = (Number(caloriesBurnt.textContent) - Number(caloriesConsumed.textContent)) + " (Deficit)"
     }
     differenceInCalories.textContent = caloriesDifference
     console.log(caloriesDifference)
